@@ -12,12 +12,13 @@ Follow variables are useable :
  If you would like to show the timestamp of the image ,you can use <?php echo $exif['created_timestamp'] ?>
 **/
 ?>
-<?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($gallery)) : ?>
-<div class="ngg-gallerytitle">
-	<?php echo $gallery->name; ?>
-</div>
-<div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
 
+<?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($gallery)) : ?>
+
+<div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
+	<div class="ngg-gallerytitle">
+		<?php echo @$gallery->name; ?>
+	</div>
 <?php if ($gallery->show_slideshow) { ?>
 	<!-- Slideshow link -->
 	<div class="slideshowlink">
